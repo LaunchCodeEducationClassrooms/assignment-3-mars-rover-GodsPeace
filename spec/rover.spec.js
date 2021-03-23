@@ -16,11 +16,14 @@ describe("Rover class", function() {
  });
  
   it("response returned by receiveMessage contains name of message", function() {
-  let commands = [new Command('STATUS_CHECK'), new Command('MOVE', 20)];
-  let message = new Message('Another message!', commands);
-  let rover= new Rover(3456)
-  let response = rover.receiveMessage(message);
-  expect (response.name).toEqual(message.name)
+  //let commands = [new Command('STATUS_CHECK'), new Command('MOVE', 20)];
+   let message = new Message('Another message!',[new Command('STATUS_CHECK'), new Command('MOVE', 20)]);
+   let rover= new Rover(3456)
+  let results = rover.receiveMessage(message);
+  expect (results.message).toEqual(message.name)
+
+  
+   
   });
   });
 

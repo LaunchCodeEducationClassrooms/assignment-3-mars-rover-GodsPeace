@@ -9,13 +9,15 @@ class Rover {
 
 receiveMessage(message) {
 
+let results ={}
 
 for (const command of message.commands){
     if(command.commandType == 'MOVE'){
-      }if(this.mode == 'LOW_POWER'){
+
+          }if(this.mode == 'LOW_POWER'){
         results.push({completed: false});
       }else{
-        result.push({completed: true})
+        results.push({completed: true})
          this.position = command.value
       }  
       
@@ -27,6 +29,6 @@ for (const command of message.commands){
 return {message: message.name, results: []}
 
 }
-
+}
 module.exports = Rover;
 
