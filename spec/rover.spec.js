@@ -20,10 +20,9 @@ describe("Rover class", function() {
    let message = new Message('Another message!',[new Command('STATUS_CHECK'), new Command('MOVE', 20)]);
    let rover= new Rover(3456)
   let results = rover.receiveMessage(message);
-  expect (results.message).toEqual(message.name)
+  expect (results[0]).toEqual(message.name)
 
   
-   
   });
   });
 

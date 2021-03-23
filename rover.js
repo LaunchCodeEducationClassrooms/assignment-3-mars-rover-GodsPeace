@@ -7,7 +7,8 @@ class Rover {
   
 }
 
-receiveMessage(message) {
+
+receiveMessage(message)
 
 let results ={}
 
